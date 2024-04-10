@@ -7,12 +7,20 @@ const path = require("path");
 module.exports = function withFreshChat(config) {
   const withStrings = plugins.withStringsXml(config, (config) => {
     // console.log("withStringsXml", JSON.stringify(config.modResults, null, 2));
-    config.modResults.resources.string.push({
-      $: {
-        name: "freshchat_file_provider_authority",
-      },
-      _: `${config.android.package}.provider`,
-    });
+    if (
+      !config.modResults.resources.string.find(
+        (v) =>
+          v["$"] &&
+          v["$"].name &&
+          v["$"].name === "freshchat_file_provider_authority",
+      )
+    )
+      config.modResults.resources.string.push({
+        $: {
+          name: "freshchat_file_provider_authority",
+        },
+        _: `${config.android.package}.provider`,
+      });
     return config;
   });
   return plugins.withAndroidManifest(withStrings, (config) => {

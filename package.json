@@ -1,6 +1,6 @@
 {
   "name": "expo-react-native-freshchat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Modify Android config during Expo prebuild to add react-natve-freshchat image handling",
   "main": "./index.js",
   "repository": "https://github.com/erasmuswill/expo-react-native-freshchat",
