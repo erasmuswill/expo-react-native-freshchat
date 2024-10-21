@@ -1,9 +1,18 @@
 {
   "name": "expo-react-native-freshchat",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Modify Android config during Expo prebuild to add react-natve-freshchat image handling",
-  "main": "./index.js",
+  "main": "./app.plugin.js",
   "repository": "https://github.com/erasmuswill/expo-react-native-freshchat",
+  "homepage": "https://github.com/erasmuswill/expo-react-native-freshchat",
+  "bugs": {
+    "url": "https://github.com/erasmuswill/expo-react-native-freshchat/issues"
+  },
+  "keywords": [
+    "freshchat",
+    "react-native",
+    "expo"
+  ],
   "author": "Wilhelm Erasmus",
   "license": "GNU GPL V3",
   "private": false,

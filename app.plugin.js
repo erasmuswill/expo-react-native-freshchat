@@ -1,9 +1,5 @@
 const plugins = require("@expo/config-plugins");
-const {
-  mergeContents,
-} = require("@expo/config-plugins/build/utils/generateCode");
-const fs = require("fs");
-const path = require("path");
+
 module.exports = function withFreshChat(config) {
   const withStrings = plugins.withStringsXml(config, (config) => {
     // console.log("withStringsXml", JSON.stringify(config.modResults, null, 2));
