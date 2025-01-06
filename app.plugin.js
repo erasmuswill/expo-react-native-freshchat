@@ -63,7 +63,7 @@ function withiOSAppDelegateH(config) {
     if (contents.includes("EXAppDelegateWrapper"))
       contents = contents.replaceAll(
         "EXAppDelegateWrapper",
-        "EXAppDelegateWrapper<RCTBridgeDelegate, UNUserNotificationCenterDelegate>",
+        "EXAppDelegateWrapper <RCTBridgeDelegate, UNUserNotificationCenterDelegate>",
       );
     else
       plugins.WarningAggregator.addWarningIOS(
