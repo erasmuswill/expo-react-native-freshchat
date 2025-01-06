@@ -57,6 +57,9 @@ function withiOSAppDelegateH(config) {
     else path = path.replace("AppDelegate.m", "AppDelegate.h");
 
     let contents = readFileSync(path, "utf8");
+
+    if (contents.includes("UNUserNotificationCenterDelegate")) return config;
+
     if (contents.includes("EXAppDelegateWrapper"))
       contents = contents.replaceAll(
         "EXAppDelegateWrapper",
